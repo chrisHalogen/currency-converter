@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HID Converter</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="outer-container">
+      <div class="inner-container">
+        <h1>HID Converter</h1>
+        <div class="innermost-container">
+          <p class="title">Exchange Rate</p>
+          <p class="rate">
+            <span class="symbol">#</span>
+            <span class="value">33.24</span>
+          </p>
+          <div class="input-container">
+            <div class="single">
+              <label for="amount">Amount</label>
+              <input
+                type="text"
+                name="amount"
+                id="amount"
+                placeholder="Enter Amount..."
+              />
+            </div>
+            <div class="grid-container">
+              <div class="single">
+                <label for="from">From</label>
+                <select name="from" id="from" class="currency-selector">
+                  <option value="0">-- Select --</option>
+                </select>
+              </div>
+              <div class="single">
+                <label for="to">To</label>
+                <select name="to" id="to" class="currency-selector">
+                  <option value="0">-- Select --</option>
+                </select>
+              </div>
+            </div>
+            <hr />
+            <div class="single">
+              <label for="equ">Equivalent</label>
+              <input type="text" name="equ" id="equ" disabled />
+            </div>
+          </div>
+          <button>Switch Currencies</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>

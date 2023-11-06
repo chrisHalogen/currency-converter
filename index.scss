@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&family=Playfair+Display:wght@700&display=swap");
+
+$main-bg: #ffffff;
+$soft-bg: #eef0f2;
+$dark-bg: #dadee1;
+
+$dark-color: #1b1f24;
+$main-color: #414141;
+$soft-color: #b1b1b1;
+
+$theme-color: #0b85b3;
+
+@mixin below-screen($screen-size) {
+  @media (max-width: $screen-size) {
+    @content;
+  }
+}
+
+@mixin flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin playfair() {
+  font-family: "Playfair Display", serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Fira Sans", sans-serif;
+}
+
+.outer-container {
+  width: 100%;
+  height: 100vh;
+  background-color: $dark-bg;
+
+  @include flex-center();
+
+  .inner-container {
+    width: 85%;
+    max-width: 500px;
+    height: fit-content;
+
+    h1 {
+      @include playfair();
+      font-size: 2rem;
+      line-height: 0;
+      text-align: center;
+      word-break: break-all;
+    }
+
+    .innermost-container {
+      margin-top: 2rem;
+      border-top: 0.5rem solid $theme-color;
+      background-color: $main-bg;
+      padding: 2rem;
+
+      .title {
+        font-size: 1rem;
+        text-align: center;
+        color: $soft-color;
+        margin-bottom: 1rem;
+      }
+
+      .rate {
+        margin-top: 1.5rem;
+        font-size: 4rem;
+        line-height: 0;
+        text-align: center;
+        margin-bottom: 3rem;
+        @include playfair();
+        display: flex;
+        align-self: center;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        word-break: break-all;
+
+        @include below-screen(460px) {
+          font-size: 3rem;
+        }
+        @include below-screen(380px) {
+          font-size: 2rem;
+        }
+        @include below-screen(300px) {
+          font-size: 1.5rem;
+        }
+      }
+
+      .input-container {
+        .single {
+          margin: 0.5rem 0;
+
+          &:last-child {
+            margin-bottom: 2rem;
+          }
+
+          label {
+            display: block;
+            font-size: 0.85rem;
+            margin-bottom: 0.25rem;
+            color: $soft-color;
+          }
+
+          input,
+          select {
+            width: 100%;
+            outline: none;
+            border: 1px solid rgba($theme-color, 0.5);
+          }
+
+          input[type="text"] {
+            // border: 1px solid rgba($theme-color, 0.5);
+            border-radius: 0;
+            padding: 0.5rem 1rem;
+            color: $main-color;
+            font-size: 1.25rem;
+          }
+
+          select {
+            font-size: 0.85rem;
+            padding: 0.5rem 1rem;
+            background-color: $main-bg;
+            color: $main-color;
+            cursor: pointer;
+            padding-right: 2rem;
+            margin: 0;
+            appearance: none;
+            margin: 0;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            appearance: none;
+            // -webkit-appearance: none;
+            // -moz-appearance: none;
+
+            background-image: linear-gradient(
+                45deg,
+                transparent 50%,
+                $theme-color 50%
+              ),
+              linear-gradient(135deg, $theme-color 50%, transparent 50%),
+              linear-gradient(
+                to right,
+                rgba($theme-color, 0.25),
+                rgba($theme-color, 0.25)
+              );
+            background-position: calc(100% - 16px) calc(1em + 0px),
+              calc(100% - 11px) calc(1em + 0px), 100% 0;
+            background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
+            background-repeat: no-repeat;
+          }
+        }
+
+        .grid-container {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1rem;
+
+          @include below-screen(460px) {
+            grid-template-columns: 1fr;
+            gap: 0;
+          }
+        }
+
+        hr {
+          outline: none;
+          border: none;
+          margin-bottom: 1rem;
+          border-bottom: 2px dotted rgba($theme-color, 0.5);
+        }
+      }
+
+      button {
+        padding: 1rem 2rem;
+        display: block;
+        margin: 0 auto;
+        background-color: $theme-color;
+        color: $main-bg;
+        font-size: 1.25rem;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        transition: 0.25s ease;
+
+        &:hover {
+          background-color: rgba($theme-color, 0.9);
+        }
+
+        @include below-screen(400px) {
+          font-size: 1rem;
+        }
+
+        @include below-screen(325px) {
+          padding: 0.75rem 1.5rem;
+        }
+      }
+    }
+  }
+}

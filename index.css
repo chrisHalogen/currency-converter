@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&family=Playfair+Display:wght@700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Fira Sans", sans-serif;
+}
+
+.outer-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #dadee1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.outer-container .inner-container {
+  width: 85%;
+  max-width: 500px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.outer-container .inner-container h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  line-height: 0;
+  text-align: center;
+  word-break: break-all;
+}
+.outer-container .inner-container .innermost-container {
+  margin-top: 2rem;
+  border-top: 0.5rem solid #0b85b3;
+  background-color: #ffffff;
+  padding: 2rem;
+}
+.outer-container .inner-container .innermost-container .title {
+  font-size: 1rem;
+  text-align: center;
+  color: #b1b1b1;
+  margin-bottom: 1rem;
+}
+.outer-container .inner-container .innermost-container .rate {
+  margin-top: 1.5rem;
+  font-size: 4rem;
+  line-height: 0;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-family: "Playfair Display", serif;
+  display: flex;
+  align-self: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  word-break: break-all;
+}
+@media (max-width: 460px) {
+  .outer-container .inner-container .innermost-container .rate {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 380px) {
+  .outer-container .inner-container .innermost-container .rate {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 300px) {
+  .outer-container .inner-container .innermost-container .rate {
+    font-size: 1.5rem;
+  }
+}
+.outer-container .inner-container .innermost-container .input-container .single {
+  margin: 0.5rem 0;
+}
+.outer-container .inner-container .innermost-container .input-container .single:last-child {
+  margin-bottom: 2rem;
+}
+.outer-container .inner-container .innermost-container .input-container .single label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+  color: #b1b1b1;
+}
+.outer-container .inner-container .innermost-container .input-container .single input,
+.outer-container .inner-container .innermost-container .input-container .single select {
+  width: 100%;
+  outline: none;
+  border: 1px solid rgba(11, 133, 179, 0.5);
+}
+.outer-container .inner-container .innermost-container .input-container .single input[type=text] {
+  border-radius: 0;
+  padding: 0.5rem 1rem;
+  color: #414141;
+  font-size: 1.25rem;
+}
+.outer-container .inner-container .innermost-container .input-container .single select {
+  font-size: 0.85rem;
+  padding: 0.5rem 1rem;
+  background-color: #ffffff;
+  color: #414141;
+  cursor: pointer;
+  padding-right: 2rem;
+  margin: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  margin: 0;
+  box-sizing: border-box;
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, #0b85b3 50%), linear-gradient(135deg, #0b85b3 50%, transparent 50%), linear-gradient(to right, rgba(11, 133, 179, 0.25), rgba(11, 133, 179, 0.25));
+  background-position: calc(100% - 16px) calc(1em + 0px), calc(100% - 11px) calc(1em + 0px), 100% 0;
+  background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
+  background-repeat: no-repeat;
+}
+.outer-container .inner-container .innermost-container .input-container .grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+@media (max-width: 460px) {
+  .outer-container .inner-container .innermost-container .input-container .grid-container {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+.outer-container .inner-container .innermost-container .input-container hr {
+  outline: none;
+  border: none;
+  margin-bottom: 1rem;
+  border-bottom: 2px dotted rgba(11, 133, 179, 0.5);
+}
+.outer-container .inner-container .innermost-container button {
+  padding: 1rem 2rem;
+  display: block;
+  margin: 0 auto;
+  background-color: #0b85b3;
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+.outer-container .inner-container .innermost-container button:hover {
+  background-color: rgba(11, 133, 179, 0.9);
+}
+@media (max-width: 400px) {
+  .outer-container .inner-container .innermost-container button {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 325px) {
+  .outer-container .inner-container .innermost-container button {
+    padding: 0.75rem 1.5rem;
+  }
+}/*# sourceMappingURL=index.css.map */
